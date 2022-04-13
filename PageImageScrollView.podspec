@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PageImageScrollView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of PageImageScrollView.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/ahnjh1028@naver.com/PageImageScrollView'
+  s.homepage         = 'https://github.com/JiHoonAHN/PageImageScrollView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ahnjh1028@naver.com' => 'ahnjh1028@naver.com' }
-  s.source           = { :git => 'https://github.com/ahnjh1028@naver.com/PageImageScrollView.git', :tag => s.version.to_s }
+  s.author           = { 'JiHoonAHN' => 'ahnjh1028@naver.com' }
+  s.source           = { :git => 'https://github.com/JiHoonAHN/PageImageScrollView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
