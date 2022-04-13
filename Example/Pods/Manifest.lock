@@ -1,0 +1,16 @@
+PODS:
+  - PageImageScrollView (0.1.0)
+
+DEPENDENCIES:
+  - PageImageScrollView (from `../`)
+
+EXTERNAL SOURCES:
+  PageImageScrollView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PageImageScrollView: a1ef71d8b4f33a92dd8dbcef0e7a1859b1ea9f4c
+
+PODFILE CHECKSUM: 06ef4a7a9e5dc098a651bf01abec35f1962e7e38
+
+COCOAPODS: 1.11.2

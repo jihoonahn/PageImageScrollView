@@ -1,0 +1,6 @@
+framework module PageImageScrollView {
+  umbrella header "PageImageScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}
