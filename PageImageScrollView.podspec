@@ -32,6 +32,10 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'PageImageScrollView/Classes/**/*'
   
+  s.swift_versions = '5.0'
+  s.frameworks = 'UIKit', 'Foundation'
+  
+  
   # s.resource_bundles = {
   #   'PageImageScrollView' => ['PageImageScrollView/Assets/*.png']
   # }

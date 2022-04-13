@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14215EF1EAAD6B0EE40B28B4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		22599AA327F0E5EBA22A4DBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		14215EF1EAAD6B0EE40B28B4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		22599AA327F0E5EBA22A4DBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		244BED13477EFF15B30CDC8E /* Pods-PageImageScrollView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageImageScrollView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PageImageScrollView_Tests/Pods-PageImageScrollView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FC1EB6BA985A3C41C1544C3 /* Pods-PageImageScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageImageScrollView_Example.release.xcconfig"; path = "Target Support Files/Pods-PageImageScrollView_Example/Pods-PageImageScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PageImageScrollView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageImageScrollView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +46,7 @@
 		80BC94EE14DA8B5068EAE6BB /* Pods-PageImageScrollView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageImageScrollView_Example.debug.xcconfig"; path = "Target Support Files/Pods-PageImageScrollView_Example/Pods-PageImageScrollView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B033F9CBDD708749C35B2818 /* Pods_PageImageScrollView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageImageScrollView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50C2AA92E30763FBF805046 /* Pods-PageImageScrollView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageImageScrollView_Tests.release.xcconfig"; path = "Target Support Files/Pods-PageImageScrollView_Tests/Pods-PageImageScrollView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E7B32C306F8FDF1B272B36DA /* PageImageScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PageImageScrollView.podspec; path = ../PageImageScrollView.podspec; sourceTree = "<group>"; };
+		E7B32C306F8FDF1B272B36DA /* PageImageScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PageImageScrollView.podspec; path = ../PageImageScrollView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				244BED13477EFF15B30CDC8E /* Pods-PageImageScrollView_Tests.debug.xcconfig */,
 				B50C2AA92E30763FBF805046 /* Pods-PageImageScrollView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -484,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -499,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
