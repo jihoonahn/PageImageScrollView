@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'PageImageScrollView_Example' do
+  pod 'PageImageScrollView', :path => '../'
+
+  target 'PageImageScrollView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
