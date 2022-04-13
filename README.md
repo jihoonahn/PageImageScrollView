@@ -9,9 +9,24 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
+### import
+```swift
+import PageImageScrollView
+```
 
-## Installation
+## Use
+### Storyboard
+Add a custom view to the storyboard and set its class to "PageImageScrollView"
+
+### Programmatically
+```swift
+let pagescollView = PageImageScrollView()
+```
+
+
+
+## Cocoapods
 
 PageImageScrollView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -19,12 +34,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'PageImageScrollView'
 ```
-
 ## Author
+JiHoonAHN, ahnjh1028@naver.com
 
-ahnjh1028@naver.com, ahnjh1028@naver.com
 
 ## License
 
 PageImageScrollView is available under the MIT license. See the LICENSE file for more info.
-# PageImageScrollView

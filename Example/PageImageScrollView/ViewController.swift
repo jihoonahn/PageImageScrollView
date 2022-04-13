@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         UIImage(systemName: "xmark")
     ]
     
+    
+    
     private lazy var pageScrollView : PageImageScrollView = {
         let pageScrollView = PageImageScrollView(
             frame: .zero,
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
             pageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             pageScrollView.heightAnchor.constraint(equalToConstant: 400)
         ])
+        pageScrollView.frame = .zero
         
         // Do any additional setup after loading the view, typically from a nib.
     }

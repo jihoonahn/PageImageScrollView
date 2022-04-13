@@ -2,7 +2,10 @@ import UIKit
 
 public final class PageImageScrollView : UIView{
         
-    private let images : [UIImage?]
+    public var images : [UIImage?] = []
+    public var currentPage : Int = 0
+    public var pageIndicatorTintColor : UIColor? = .black
+    public var currentPageIndicatorTintColor : UIColor? = .white
     
     private let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
@@ -27,17 +30,22 @@ public final class PageImageScrollView : UIView{
         self.images = [UIImage()]
         super.init(coder: coder)
     }
+    //MARK: - Init
+    public init() {
+        super.init(frame: .zero)
+        configureUI()
+        scrollView.delegate = self
+    }
     
     public init(
-        frame : CGRect,
         pageIndicatorTintColor : UIColor? = nil,
         currentPageIndicatorTintColor : UIColor? = nil,
         images : [UIImage?]
     ){
         self.images = images
-        super.init(frame: frame)
-        self.pageControl.pageIndicatorTintColor = pageIndicatorTintColor
-        self.pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+        self.pageIndicatorTintColor = pageIndicatorTintColor
+        self.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+        super.init(frame: .zero)
         configureUI()
         scrollView.delegate = self
     }
@@ -63,6 +71,9 @@ public final class PageImageScrollView : UIView{
     private func configureUI(){
         addSubview(scrollView)
         addSubview(pageControl)
+        
+        pageControl.pageIndicatorTintColor = pageIndicatorTintColor
+        pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor
     }
     
     private func addContentScrollView(){
