@@ -12,7 +12,6 @@ import PageImageScrollView
 @available(iOS 13.0, *)
 class ViewController: UIViewController {
     
-    
     private let images = [
         UIImage(systemName: "xmark"),
         UIImage(systemName: "xmark"),
@@ -20,18 +19,8 @@ class ViewController: UIViewController {
         UIImage(systemName: "xmark")
     ]
     
-    
-    
-    private lazy var pageScrollView : PageImageScrollView = {
-        let pageScrollView = PageImageScrollView(
-            frame: .zero,
-            pageIndicatorTintColor: UIColor.darkGray,
-            currentPageIndicatorTintColor: UIColor.systemBlue,
-            images: images
-        )
-        pageScrollView.translatesAutoresizingMaskIntoConstraints = false
-        return pageScrollView
-    }()
+    let pageScrollView = PageImageScrollView()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +32,14 @@ class ViewController: UIViewController {
             pageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             pageScrollView.heightAnchor.constraint(equalToConstant: 400)
         ])
-        pageScrollView.frame = .zero
         
-        // Do any additional setup after loading the view, typically from a nib.
+        pageScrollView.currentPageIndicatorTintColor = .red
+        pageScrollView.pageIndicatorTintColor = .black
+        pageScrollView.images = [
+            .init(systemName: "1.circle") ?? .init(),
+            .init(systemName: "2.circle") ?? .init(),
+            .init(systemName: "3.circle") ?? .init()
+        ]        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {

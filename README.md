@@ -1,13 +1,13 @@
 # PageImageScrollView
 
-[![CI Status](https://img.shields.io/travis/ahnjh1028@naver.com/PageImageScrollView.svg?style=flat)](https://travis-ci.org/ahnjh1028@naver.com/PageImageScrollView)
+
 [![Version](https://img.shields.io/cocoapods/v/PageImageScrollView.svg?style=flat)](https://cocoapods.org/pods/PageImageScrollView)
 [![License](https://img.shields.io/cocoapods/l/PageImageScrollView.svg?style=flat)](https://cocoapods.org/pods/PageImageScrollView)
 [![Platform](https://img.shields.io/cocoapods/p/PageImageScrollView.svg?style=flat)](https://cocoapods.org/pods/PageImageScrollView)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Requirements
+- iOS 9.0 or higher
+- Swift 5.0
 
 ## Usage
 ### import
@@ -21,9 +21,23 @@ Add a custom view to the storyboard and set its class to "PageImageScrollView"
 
 ### Programmatically
 ```swift
-let pagescollView = PageImageScrollView()
+let pageScrollView = PageImageScrollView()
+view.addSubView(pageScrollView)
 ```
 
+### Example
+```swift
+pageScroll.pageIndicatorTintColor = UIColor.systemBlue
+pageScrollView.currentPageIndicatorTintColor = UIColor.black
+pageScrollView.images= [
+    .init(systemName: "1.circle") ?? .init(),
+    .init(systemName: "2.circle") ?? .init(),
+    .init(systemName: "3.circle") ?? .init()
+]
+```
+
+
+<img src = "https://user-images.githubusercontent.com/68891494/163092458-33899ca6-5040-41cf-b705-2334e78b4d69.gif" width = 200>
 
 
 ## Cocoapods

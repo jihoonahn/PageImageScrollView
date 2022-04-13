@@ -2,10 +2,9 @@ import UIKit
 
 public final class PageImageScrollView : UIView{
         
-    public var images : [UIImage?] = []
-    public var currentPage : Int = 0
-    public var pageIndicatorTintColor : UIColor? = .black
-    public var currentPageIndicatorTintColor : UIColor? = .white
+    public var images : [UIImage?]
+    public var pageIndicatorTintColor : UIColor?
+    public var currentPageIndicatorTintColor : UIColor?
     
     private let scrollView : UIScrollView = {
         let scrollView = UIScrollView()
@@ -21,7 +20,6 @@ public final class PageImageScrollView : UIView{
     private lazy var pageControl : UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.currentPage = 0
-        pageControl.numberOfPages = images.count
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
@@ -30,22 +28,17 @@ public final class PageImageScrollView : UIView{
         self.images = [UIImage()]
         super.init(coder: coder)
     }
-    //MARK: - Init
-    public init() {
-        super.init(frame: .zero)
-        configureUI()
-        scrollView.delegate = self
-    }
     
     public init(
         pageIndicatorTintColor : UIColor? = nil,
         currentPageIndicatorTintColor : UIColor? = nil,
-        images : [UIImage?]
+        images : [UIImage?]? = nil
     ){
-        self.images = images
+        self.images = images ?? [UIImage()]
         self.pageIndicatorTintColor = pageIndicatorTintColor
         self.currentPageIndicatorTintColor = currentPageIndicatorTintColor
         super.init(frame: .zero)
+        self.translatesAutoresizingMaskIntoConstraints = false
         configureUI()
         scrollView.delegate = self
     }
@@ -64,6 +57,7 @@ public final class PageImageScrollView : UIView{
             pageControl.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor)
         ])
         addContentScrollView()
+        setupAfterViewDidLoad()
     }
     
     //MARK: - Private
@@ -71,9 +65,6 @@ public final class PageImageScrollView : UIView{
     private func configureUI(){
         addSubview(scrollView)
         addSubview(pageControl)
-        
-        pageControl.pageIndicatorTintColor = pageIndicatorTintColor
-        pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor
     }
     
     private func addContentScrollView(){
@@ -86,12 +77,16 @@ public final class PageImageScrollView : UIView{
             scrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
         }
     }
+    private func setupAfterViewDidLoad(){
+        self.pageControl.pageIndicatorTintColor = pageIndicatorTintColor
+        self.pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+        self.pageControl.numberOfPages = images.count
+    }
 }
 extension PageImageScrollView : UIScrollViewDelegate{
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let value = scrollView.contentOffset.x/scrollView.frame.size.width
         pageControl.currentPage = Int(round(value))
-
     }
 }
 
