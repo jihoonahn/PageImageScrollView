@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+PageImageScrollView in Pods, no dependencies
+Pods-PageImageScrollView_Example in Pods, depends on:
+PageImageScrollView in Pods (explicit)
+Pods-PageImageScrollView_Tests in Pods, depends on:
+Pods-PageImageScrollView_Example in Pods (explicit)
