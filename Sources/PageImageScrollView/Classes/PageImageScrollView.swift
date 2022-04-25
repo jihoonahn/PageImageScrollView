@@ -51,7 +51,7 @@ public final class PageImageScrollView : UIView{
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             
-            pageControl.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 10),
+            pageControl.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 30),
             pageControl.heightAnchor.constraint(equalToConstant: 30),
             pageControl.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             pageControl.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor)
