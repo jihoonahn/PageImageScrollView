@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PageImageScrollView'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'A short description of PageImageScrollView.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'PageImageScrollView/Classes/**/*'
+  s.source_files = 'Sources/PageImageScrollView/Classes/**/*'
   
   s.swift_versions = '5.0'
   s.frameworks = 'UIKit', 'Foundation'
