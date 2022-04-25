@@ -39,8 +39,19 @@ pageScrollView.images= [
 
 <img src = "https://user-images.githubusercontent.com/68891494/163092458-33899ca6-5040-41cf-b705-2334e78b4d69.gif" width = 200>
 
+## Installation
+### Swift Package Manager
+PageImageScrollView is available througb [SPM](https://github.com/apple/swift-package-manager). To install it, simply add the following line to your Package.swift:
 
-## Cocoapods
+```swift 
+// Package.swift
+
+dependencies: [
+    .package(url: "https://github.com/JiHoonAHN/PageImageScrollView", from: "0.2.0")
+]
+```
+
+### Cocoapods
 
 PageImageScrollView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
